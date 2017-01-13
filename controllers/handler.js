@@ -3,7 +3,6 @@
 const boom = require('boom');
 
 let users = {};
-let senseless = 'Welcome students!';
 
 module.exports = {
   saveItem: function(request, reply) {
@@ -27,7 +26,7 @@ module.exports = {
   deleteItem: function(request, reply) {
     try {
       if (!users.hasOwnProperty(request.params.user))
-        reply(boom.notFound())
+        reply(boom.notFound());
       else if (!users[request.params.user].hasOwnProperty(request.params.item))
                   reply(boom.notFound());
       else {
