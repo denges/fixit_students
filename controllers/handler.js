@@ -1,6 +1,6 @@
 'use strict';
 
-const boom = require('boom')
+const boom = require('boom');
 
 let users = {};
 let senseless = 'Welcome students!';
